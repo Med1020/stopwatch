@@ -1,0 +1,147 @@
+$globe-width: 100%;
+$globe-height:  100vh;
+$middle: div($globe-height,2) ;
+
+*{
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    caret-color: transparent;
+   
+}
+body{
+    background: black;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+
+
+    #title{
+        font-size: 30px;
+        color: aliceblue;
+        text-align: center;
+        margin-bottom: 2rem ;
+    }
+    
+}
+
+.laps {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    flex-direction: column;
+    left: 42%;
+    // transform: translate(100%);
+    text-align: center;
+    overflow: auto;
+    list-style-type: none;
+    height: 150px ;
+    width: 200px;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    
+   
+    .lap-item{
+        
+        padding: 4px;
+        height: fit-content;
+        margin-bottom: 10px;
+        border: 1px solid aqua;
+        color: white;
+        border-radius: 10px;
+
+        .number,.timestamp{
+            display: inline-block;
+            color: white;
+            padding-right: 2px;
+        }
+    }
+    
+    
+    
+}
+
+.clearLap{
+    color: black;
+    position: absolute;
+    top: 100%;
+    width: 80px;
+    transform: translate(-50%);
+    border: 1px solid aqua;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: aqua;
+
+    &:hover{
+        cursor: pointer;
+        background-color: aqua;
+        transition: ease-out;
+        color: black;
+    }
+
+    &:active{
+        background-color: black;
+        color: aqua;
+    }
+}
+
+
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    caret-color: transparent;
+    .clock{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 12rem;
+        width: 12rem;
+        border: 2px solid aqua;
+        border-radius:  50%; 
+        
+        .hrs,.mins,.secs{
+            font-size: 30px;
+            color: aliceblue;
+        }
+    }
+
+}
+
+.button-wrapper{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    button{
+        padding: 10px;
+        margin: 20px;
+        background-color: black;
+        border-color: white;
+        color: white;
+        border-radius: 20%;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.1);
+            
+        }
+
+        &:active{
+            box-shadow: none;
+        }
+
+    }
+
+  
+}
+
+.hidden{
+    visibility: hidden;
+}
